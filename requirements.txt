@@ -1,3 +1,4 @@
+# Existing dependencies
 absl-py==2.0.0
 altair==5.0.1
 annotated-types==0.5.0
@@ -155,3 +156,8 @@ nbformat==5.5.0
 nest-asyncio==1.5.5
 networkx==3.1
 nlpaug==1.1.11
+
+# Add Django and related libraries
+Django==3.2.6
+djangorestframework==3.12.4
+requests==2.26.0
