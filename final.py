@@ -22,7 +22,7 @@ hy.set_page_config(layout='wide', initial_sidebar_state='expanded')
 st.session_state.sync = True
 st.session_state.allow_access = True
 
-@st.cache_data(allow_output_mutation=True)
+@st.cache_resource(allow_output_mutation=True)
 def load_and_preprocess_data():
     # Load Earthquakes.csv into a pandas DataFrame
     gempa_dataset = pd.read_csv('Earthquakes.csv')
@@ -45,7 +45,7 @@ def load_and_preprocess_data():
 
     return X_train_imputed, y_train
 
-@st.cache_data(allow_output_mutation=True)
+@st.cache_resource(allow_output_mutation=True)
 def train_models(X_train, y_train):
     # Train a Random Forest model
     rf_model = make_pipeline(StandardScaler(), RandomForestRegressor(random_state=42))
